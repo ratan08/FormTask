@@ -1,0 +1,24 @@
+.container{
+    width: 45vw;
+    padding: 25px;
+}
+.form-area{
+    margin: 5%;
+}
+.form-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    .form-field{
+        width: 27vw;
+    }
+    .field{
+        width: 20vw;
+        align-self: center;
+    }
+    .radio{
+        align-self: center;
+        width: 27vw;
+    }
+}
