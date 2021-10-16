@@ -1,5 +1,6 @@
 .container{
     width: 45vw;
+    height: 50vh;
     padding: 25px;
 }
 .form-area{
@@ -11,14 +12,18 @@
     align-items: center;
     flex-wrap: wrap;
     .form-field{
-        width: 27vw;
+        width: 22vw;
     }
-    .field{
-        width: 20vw;
-        align-self: center;
+    .form-field-subject{
+        width: 15vw;
+        align-self: flex-start;
     }
+    
     .radio{
         align-self: center;
-        width: 27vw;
+        width: 22vw;
     }
+}
+.subject{
+    align-self: center;
 }

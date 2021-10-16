@@ -69,6 +69,10 @@ export class RegistrationFormComponent implements OnInit {
       data:this.registrationForm.value
     });
   }
+  
+  deleteRow(index: number) {
+    (<FormArray>this.registrationForm.get('subject')).removeAt(index);
+  }
   add(){
     (<FormArray>this.registrationForm.get('subject')).push(new FormControl('',Validators.required));
    }
