@@ -103,7 +103,7 @@
                    <button mat-icon-button type="button" class="delete-button" (click)="deleteRow(i)" *ngIf="addSubject.length> 1"><mat-icon>delete</mat-icon></button>
                   </ng-container> 
                </div>
-               <button style="margin-bottom: 15px;" type="button" mat-raised-button (click)="add()" ><mat-icon>add</mat-icon> Add</button>
+               <button style="margin-bottom: 15px;" type="button" mat-raised-button (click)="add()" *ngIf="addSubject.length< 10" ><mat-icon>add</mat-icon> Add</button>
               </div>
               <button mat-raised-button color="primary" type="submit" (click)="submit()" [disabled]="registrationForm.invalid">Submit</button>
         </form>
