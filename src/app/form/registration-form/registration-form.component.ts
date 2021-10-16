@@ -76,7 +76,7 @@ export class RegistrationFormComponent implements OnInit {
   add(){
     (<FormArray>this.registrationForm.get('subject')).push(new FormControl('',Validators.required));
    }
-  keyPress(event: { keyCode: number; preventDefault: () => void; }){
+  char(event: { keyCode: number; preventDefault: () => void; }){
     this.input.characters(event)
   }
   numbers(event: { keyCode: number; preventDefault: () => void; }){

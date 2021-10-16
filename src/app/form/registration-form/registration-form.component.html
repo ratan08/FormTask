@@ -6,7 +6,7 @@
             <mat-form-field class="form-field" appearance="outline">
                 <mat-label> Full Name
                 </mat-label>
-                <input matInput #name maxlength="40" (keypress)="keyPress($event)" formControlName="name" type="text">
+                <input matInput #name maxlength="40" (keypress)="char($event)" formControlName="name" type="text">
                 <mat-error *ngIf="registrationForm.controls.name.touched && registrationForm.controls.name.invalid">
                   <span *ngIf="registrationForm.controls.name.errors!.required">This field is mandatory.</span>
                 </mat-error>
@@ -98,7 +98,7 @@
                   <ng-container formArrayName="subject" *ngFor="let subject of addSubject; let i=index">
                    <mat-form-field class="form-field-subject"  appearance="outline">
                      <mat-label>Name of subjects</mat-label>
-                     <input  matInput [formControlName]="i">
+                     <input  matInput (keypress)="char($event)" [formControlName]="i">
                    </mat-form-field>
                    <button mat-icon-button type="button" class="delete-button" (click)="deleteRow(i)" *ngIf="addSubject.length> 1"><mat-icon>delete</mat-icon></button>
                   </ng-container> 
